@@ -1,0 +1,90 @@
+Bryanz0@users.noreply.github.com
+
+CD
+http://aquiseprograma.co/2015/11/como-utilizar-semaforos-en-java/
+https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html
+https://stackoverflow.com/questions/12571648/simple-counting-semaphore
+https://howtodoinjava.com/java/multi-threading/binary-semaphore-tutorial-and-example/
+https://www.concretepage.com/java/java-counting-and-binary-semaphore-tutorial-with-example
+http://webdiis.unizar.es/~ezpeleta/lib/exe/fetch.php?media=misdatos:pc:introjava.pdf
+// w1.cpp: define el punto de entrada de la aplicación de consola.
+//
+#include "stdafx.h"
+#include "omp.h"
+#include "iostream"
+#include <stdlib.h>
+
+static long num_steps = 100000;
+double step;
+#define PAD 8
+#define NUM_THREADS 4
+
+
+void main()
+{
+	int nthreads;
+	double t1,t2=0.0;
+	double pi=0.0;	step=1.0/(double)num_steps;
+	
+	omp_set_num_threads(NUM_THREADS);
+	t1=omp_get_wtime();
+
+#pragma omp parallel
+	{
+		int i, id, nthrds; double x, sum;
+		id=omp_get_thread_num();
+		nthrds=omp_get_num_threads();
+		if(id==0)nthreads=nthrds;
+		id=omp_get_thread_num();
+		nthrds=omp_get_num_threads();
+		for(i=id,sum=0.0;i<num_steps;i=i+nthrds){
+			x=(i+0.5)*step;
+			sum+=4.0/(1.0+x*x);
+		}
+		t2=omp_get_wtime();
+#pragma omp critical
+		{
+		pi+=sum*step;
+		}
+		printf("tiempo:%f \n PI:%f \n",t2-t1,pi);
+
+
+	/*
+	int i,nthreads; double pi,sum[NUM_THREADS][PAD];
+	double t1,t2=0.0;
+	step=1.0/(double)num_steps;
+	omp_set_num_threads(NUM_THREADS);
+	t1=omp_get_wtime();
+	#pragma omp parallel 
+	{
+		//t1=omp_get_wtime();
+		int i, id, numHilo;
+		double x;
+		id=omp_get_thread_num();
+		numHilo=omp_get_num_threads();
+		if(id==0)
+			nthreads=numHilo;
+			for(i=id,sum[id][0]=0.0;i<num_steps;i=i+numHilo){
+			x=(i+0.5)*step;
+			sum[id][0]+= 4.0 / (1.0+x*x);
+		}
+	}
+	t2=omp_get_wtime();
+	for(i=0,pi=0.0;i<nthreads;i++)
+		pi+=sum[i][0]*step;
+	printf("tiempo:%f \n PI:%f \n",t2-t1,pi);
+	*/
+}
+
+}
+
+BI
+https://leninmhs.com.ve/manual-pdi-kettle-pentaho/
+
+
+Beatus ille
+ Veni, vidi, vici
+Delirium tremens
+Faber est suae quisque fortunae
+Extinctus ambitur idem
+Amare et sapere vix deo conceditur

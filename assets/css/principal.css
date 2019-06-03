@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#bg{
+    background-image: url(imagenes/bg.JPG);
+    background-attachment: fixed;
+    background-size: 100%;
+
+    background-repeat:repeat-y;
+}
+
+.menu {
+    padding-top: 15px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.menu ul li{
+    display: inline;
+}
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+/*Seccion bienvenidos*/
+.bienvenidos{
+    padding: 40vh;
+    background: rgba(0,0,0,0.51);
+}
+.titulo{
+
+    font-size: 30px;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+/*Seccion repositorio*/
+.repositorio{
+    background: rgba(255,255,255,0.51);
+    padding-bottom: 20px;
+    color:black;
+}
+
+.repositorio p{
+    max-width: 1055px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.repositorio ul{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repositorio ul li{
+    text-decoration: none;
+    list-style: none;
+}
+.repositorio ul li figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.repositorio ul li figure img{
+    width: 100px;
+    height: 100px;
+}
+
+/* Seccion Foro*/
+/*Seccion de Contactos*/
+/*Seccion de Ayuda*/

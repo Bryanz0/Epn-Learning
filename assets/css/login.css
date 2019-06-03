@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#bg{
+   background-image: url("imagenes/bg.JPG");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.loginBox {
+    width: 320px;
+    height: 420px;
+    background: rgba(0,0,0,0.61);
+    color: white;
+    top: -15%;
+    left: 25%;
+    position: absolute;
+    transform: translate(50%,50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.loginBox .escudo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.loginBox h1{
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: Andalus;
+
+}
+
+.loginBox label{
+    font-family: Andalus;
+    display: block;
+    font-size: 18px;
+}
+
+.loginBox input[type="text"],.loginBox input[type="password"]{
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    outline: none;
+}
+
+.loginBox input[type="submit"]{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    font-size: 20px;
+}
+
+.loginBox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.loginBox a:hover {
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        /* The file size of this background image is 93% smaller
+         * to improve page load speed on mobile internet connections */
+        background-image: url(imagenes/bg.JPG);
+    }
+}

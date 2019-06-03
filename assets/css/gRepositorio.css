@@ -1,0 +1,107 @@
+
+/*
+Código de estilos generico para todas las demas paginas correspondientes a la opcion repositorio
+
+IMPORTANTE: cada pagina es adecuada a su funcionalidad asi que si desea cambiar algun estilo debe tener cuidado
+dado que este, se vera reflejado en las demas paginas
+
+
+INICIO codigo generico
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#bg{
+
+    background-image: url("imagenes/bg.JPG");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.menu {
+    float: top;
+    padding-top: 15px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.menu ul li{
+    display: inline;
+}
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#menuLocal {
+    border-bottom: 5px solid white;
+}
+
+
+.menu ul li a:hover{
+    border-bottom: 5px solid white;
+}
+.columna{
+    display: block;
+    top: -10px;
+    float:left;
+    color:white;
+    background: transparent;
+    width: 150px;
+    height: 100vh;
+    border: 10px solid;
+    border-color: transparent;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.columna ul{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.columna ul li{
+    font-size: 17px;
+    text-align: left;
+    color:white;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.columna ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.columna ul li a:hover{
+    color:aquamarine;
+}
+
+.contenedor{
+    align-items: center;
+    margin-left: 200px;
+    height: 100vh;
+    width: 81.5%;
+    background: rgba(255,255,255,0.50);
+    background-size: cover;
+    border-color:transparent;
+    border: 5px ;
+    padding: 20px 20px;
+}
+
+.piePagina {
+    text-align: center;
+    float: bottom;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white;
+}
+/* Fin generico*/
+
+

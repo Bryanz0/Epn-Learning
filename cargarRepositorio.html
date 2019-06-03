@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargar Repositorio</title>
+    <link rel="stylesheet" href="assets/css/gRepositorio.css">
+    <link rel="stylesheet" href="assets/css/cargarRepositorio.css">
+</head>
+<!-- Codigo generico  1 para cada pagina de repositorio-->
+<body id="bg">
+<div class="menu">
+
+    <ul>
+        <li>EPN-Learning</li>
+        <li ><a id="menuLocal" href="#">Repositorio</a> </li>
+        <li><a href="#">Foro</a> </li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Ayuda</a> </li>
+        <li style="text-align-last: right"><a href="conexion/logOut.php">LogOut</a> </li>
+    </ul>
+</div>
+<div class="columna">
+    <ul>
+        <li><a href="myRepositorio.php" >My Repositorio</a></li>
+        <li><a id="submenuLocal" href="#" >Cargar Repositorio</a></li>
+        <li><a href="#" >Buscar Repositorio</a></li>
+    </ul>
+</div>
+
+<div class="contenedor" style="height: auto">
+    <!-- Fin de codigo generico 1 -->
+    <div class="infoRepositorioBox">
+        <h2 id="titulo">INGRESE LA SIGUIENTE INFORMACION</h2>
+        <form enctype="multipart/form-data" action="conexion/subirRep.php" method="POST">  
+            <label for="titulo">Titulo</label>
+            <input type="text" placeholder="titulo" name="titulo" required>
+            <label for="descripcion">Descripcion</label>
+            <textarea id="textarea" name="desc" rows="5" cols="40"></textarea>
+            <!-- esta parte debe ser llenada de una tabla de la base de datos-->
+            <label for="tipo" id="tipo"><br>Tipo de archivo</label>
+            <select name="tipoArchivo" required>
+                <option>Seleccione el tipo de archivo</option>
+                <option>Objeto de aprendizaje</option>
+                <option>Documento PDF</option>
+                <option>Presentacion PPT</option>
+                <option>Imagen</option>
+                <option>Video</option>
+                <option>Archivo .ZIP</option>
+                <option>Link</option>
+            </select>
+            <label for="autor">Autor</label>
+            <input type="text" placeholder="autor" name="autor" required>
+            <label for="institucion">Institucion</label>
+            <input type="text" placeholder="Institucion" name="inst" required>
+			<label for="carrera">Carrera</label>
+			<!-- esta parte debe ser llenada desde la base de datos-->
+			<select name="carrera" required>
+			<option>seleccione una carrera</option>
+			<option>Ingenieria en sistemas</option>
+			<option>Ingenieria de software</option>
+			<option>Ingenieria en ciencias de la computacion</option>
+			</select>
+			<label for="materia">Materia</option>
+			<!-- esta parte debe ser llenada desde la base de datos-->
+			<select style="display: block;" name="materia" required>
+			<option>Seleccione una materia</option>
+			<option>Compiladores</option>
+			<option>Algoritmos</option>
+			<option>Bases de datos</option>
+			</select>
+            <label for="fechaCrea">Fecha de creacion</label>
+            <input type="date" name="fechaCrea" required>
+            <label for="palabrasClave">Palabras Clave</label>
+            <input type="text" name="palabrasClave" required>
+            <label for="enlace">Enlace</label>
+            <input style="width: 45%" type="text" placeholder="Enlace opcional si es de tipo Link" name="link">
+            <label for="archivo">Subir archivo</label>
+            <input style="text-decoration: none; border: none; width: auto; font-size: 15px;" type="file" name="archivo" required>
+            <input id="submit" type="submit" placeholder="Cargar Repositorio">
+        </form>
+    </div>
+
+    <!-- Inicio de codigo generico 2 -->
+</div>
+
+<div>
+    <footer class="piePagina">
+        2019 EPN
+    </footer>
+</div>
+<!-- Fin de codigo generico -->
+</body>
+</html>
